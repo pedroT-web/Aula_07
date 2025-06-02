@@ -111,22 +111,49 @@
 .grid-box{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 300px);
+    grid-template-rows: repeat(2, 1fr);
     
     /* Espaçamento interno entre grids */
     gap: 10px;
     padding: 20px 10% 5px 10%;
 }
 
-.box{
-    height: 280px;
-    width: 200px;
 
-    background-color: tomato;
-    border-radius: 15px;
+.produtos figure{
+    height: 380px;
+    width: 220px;
 
-    text-align: center;
-    align-content: center;
+    background-color: #F2F2F2;
 
-    margin: auto;
+    border-radius: 20px;
+
+    padding: 10px;
+}
+
+.produtos figure:hover{
+    scale: 1.03;
+}
+
+
+.produtos figure>img{
+    width: 100%;
+    height: 200px;
+
+
+
+    object-fit: cover;
+    object-position: top;
+
+    border-radius: 20px;
+}
+
+.produtos figure>figcaption>p{
+    width: 100%;
+
+    overflow: hidden; /* tudo que for a mais, tudo que passar do limite fornecido ele esconde */
+    display: -webkit-box; /* Ele é um modelo de display, para voce limitar um caixa de texto, é muito pouco utilizado */
+
+    line-clamp: 4; /* Um valor padrão para conseguir padronizar o webkit */
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
 }
